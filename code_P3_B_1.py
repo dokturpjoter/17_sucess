@@ -1046,14 +1046,16 @@ def init(button):
         
 ###############################################################################    
 
-nn_widget = IntSlider(min=100, max=2000, step=100, value=1000, description='network size')
-np_widget = FloatSlider(min=0.005, max=0.05, step=0.005, value=0.005, description='network density')
+style = {'description_width': '30%'}
 
-D_widget = IntSlider(min=10, max=100, step=1, value=50, description='D - number of disease related genes')
-p_widget = FloatSlider(min=0.0, max=1.0, step=0.1, value=0.5, description='p - clustering')
+nn_widget = IntSlider(min=100, max=2000, step=100, value=1000, description='network size', style=style)
+np_widget = FloatSlider(min=0.005, max=0.05, step=0.005, value=0.005, description='network density', style=style)
 
-P_widget = IntSlider(min=5, max=50, step=5, value=20, description='P - number of patients and controls')
-A_widget = FloatSlider(min=0.0, max=1.0, step=0.1, value=0.5, description='A - disease signal strength')
+D_widget = IntSlider(min=10, max=100, step=1, value=50, description='D - number of disease related genes', style=style)
+p_widget = FloatSlider(min=0.0, max=1.0, step=0.1, value=0.5, description='p - clustering', style=style)
+
+P_widget = IntSlider(min=5, max=50, step=5, value=20, description='P - number of patients and controls', style=style)
+A_widget = FloatSlider(min=0.0, max=1.0, step=0.1, value=0.5, description='A - disease signal strength', style=style)
 
 params = interact(set_params, nn = nn_widget,np = np_widget, D = D_widget, p = p_widget, P = P_widget, A = A_widget )
 
