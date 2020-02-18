@@ -1049,8 +1049,8 @@ def init(button):
 style = {'description_width': '30%'}
 
 nn_widget = IntSlider(min=100, max=2000, step=50, value=1000, description='network size', style=style)
-np_widget = FloatSlider(min=0.001, max=0.05, step=0.001, value=0.006, description='network density', style=style)
-
+#np_widget = FloatSlider(min=0.001, max=0.05, step=0.001, value=0.006, description='network density', style=style)
+np_widget = FloatSlider(min=0.001, max=0.05, step=0.001, value=0.006, readout_format='.3f', description='network density', style=style)
 D_widget = IntSlider(min=10, max=100, step=1, value=50, description='D - number of disease related genes', style=style)
 p_widget = FloatSlider(min=0.0, max=1.0, step=0.05, value=0.3, description='p - clustering', style=style)
 
